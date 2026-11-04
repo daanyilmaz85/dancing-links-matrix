@@ -44,3 +44,10 @@ Properties on `DancingLinksMatrix`: `root` (the sentinel `ColumnHeader`), `colum
 Properties on `Node`: `left`, `right`, `up`, `down`, `column`, `row`.
 
 Properties on `ColumnHeader` (extends `Node`): `size`, `index`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
