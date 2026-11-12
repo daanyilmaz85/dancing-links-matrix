@@ -1,6 +1,6 @@
 {
   "name": "dancing-links-matrix",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sparse binary matrix data structure using Dancing Links for exact-cover backtracking",
   "type": "module",
   "main": "src/index.js",
